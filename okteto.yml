@@ -1,6 +1,9 @@
 dev:
-  test:
+  app:
     image: amd64/node
     autocreate: true
+    workdir: app
     sync:
       - .:/usr/src/app
+    command: |
+      npm install
